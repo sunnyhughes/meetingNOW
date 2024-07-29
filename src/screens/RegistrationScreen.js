@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
-import { registrationStyles } from './RegistrationStyles';
+import './RegistrationScreen.css';
 
 const RegistrationScreen = () => {
   const [registrationType, setRegistrationType] = useState(null);
@@ -14,30 +13,30 @@ const RegistrationScreen = () => {
   };
 
   return (
-    <ImageBackground source={require('./assets/notebook_bg.jpg')} style={registrationStyles.backgroundImage}>
-      <View style={registrationStyles.overlay}>
-        <Text style={registrationStyles.logoText}>Meeting NOW. The one-stop meeting attendance app.</Text>
-        <Text style={registrationStyles.welcomeText}>Welcome!</Text>
-      </View>
-      <View style={registrationStyles.buttonContainer}>
-        <TouchableOpacity style={registrationStyles.button} onPress={handleClientRegistration}>
-          <Text style={registrationStyles.buttonText}>Client Registration</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={registrationStyles.button} onPress={handleOrganizationRegistration}>
-          <Text style={registrationStyles.buttonText}>Organization Registration</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={registrationStyles.footer}>
-        <Text style={registrationStyles.companyInfo}>Your Company Name © 2024</Text>
-      </View>
+    <div className="background-image">
+      <div className="overlay">
+        <p className="logo-text">Meeting NOW. The one-stop meeting attendance app.</p>
+        <h1 className="welcome-text">Welcome!</h1>
+      </div>
+      <div className="button-container">
+        <button className="button" onClick={handleClientRegistration}>
+          Client Registration
+        </button>
+        <button className="button" onClick={handleOrganizationRegistration}>
+          Organization Registration
+        </button>
+      </div>
+      <div className="footer">
+        <p className="company-info">Your Company Name © 2024</p>
+      </div>
       {registrationType && (
-        <View style={registrationStyles.selectedType}>
-          <Text style={registrationStyles.selectedTypeText}>
+        <div className="selected-type">
+          <p className="selected-type-text">
             You selected: {registrationType === 'client' ? 'Client' : 'Organization'}
-          </Text>
-        </View>
+          </p>
+        </div>
       )}
-    </ImageBackground>
+    </div>
   );
 };
 

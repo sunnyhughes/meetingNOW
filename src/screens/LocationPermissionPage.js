@@ -1,5 +1,5 @@
-// LocationPermissionPage.js
 import React from 'react';
+import './LocationPermissionPage.css'; // Import CSS file for styling
 
 function LocationPermissionPage() {
   const requestLocationPermission = () => {
@@ -17,10 +17,12 @@ function LocationPermissionPage() {
   };
 
   return (
-    <div>
+    <div className="location-permission-container">
       <h1>Allow Access to Device Location</h1>
       <p>This app requires access to your device's location.</p>
-      <button onClick={requestLocationPermission}>Grant Access</button>
+      <button onClick={requestLocationPermission} className="grant-access-button">
+        Grant Access
+      </button>
     </div>
   );
 }
