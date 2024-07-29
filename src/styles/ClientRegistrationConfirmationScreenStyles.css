@@ -1,0 +1,30 @@
+/* Basic styling for the container */
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: yellow; /* Yellow notebook page background */
+  text-align: center;
+}
+
+/* Styling for the heading */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Styling for the client ID */
+.clientId {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Styling for the footer */
+.footerText {
+  color: #888;
+  margin-top: 20px;
+  position: relative; /* Adjusted to position relative instead of absolute for better control in PWA format */
+  padding-bottom: 10px; /* Added padding for spacing */
+}
