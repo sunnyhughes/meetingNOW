@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Dashboard</title>
+    <link rel="stylesheet" href="OrganizationDashboardScreenStyles.css">
+</head>
+<body>
+    <header>
+        <h1>Organization Dashboard</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="organization-info">
+                <h2>Organization</h2>
+                <p id="organization-name">Organization Name</p>
+                <p id="organization-details">Basic info about the organization</p>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#meetings">Meetings</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="welcome-message">
+                <h2>Welcome, <span id="organization-name">Organization Name</span>!</h2>
+            </section>
+            <section class="organization-profile">
+                <h3>Organization Profile</h3>
+                <p id="profile-details">Organization details here</p>
+            </section>
+            <section class="client-list">
+                <h3>Client List</h3>
+                <ul id="client-list">
+                    <!-- List of clients here -->
+                </ul>
+            </section>
+            <section class="upcoming-meetings">
+                <h3>Upcoming Meetings</h3>
+                <ul id="meetings-list">
+                    <!-- Upcoming meetings here -->
+                </ul>
+            </section>
+            <section class="settings">
+                <h3>Settings</h3>
+                <button id="edit-profile">Edit Profile</button>
+                <button id="manage-clients">Manage Clients</button>
+                <button id="schedule-meetings">Schedule Meetings</button>
+            </section>
+        </main>
+    </div>
+    <script src="OrganizationDashboardScreen.js"></script>
+</body>
+</html>
