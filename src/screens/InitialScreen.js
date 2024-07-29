@@ -1,31 +1,27 @@
+// src/screens/InitialScreen.js
+
 import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { styles } from './styles';
+import './InitialScreen.css'; // Assuming you use CSS for styling
 
 const InitialScreen = () => {
   return (
-    <View style={[styles.container, styles.whiteBackground]}>
+    <div className="container">
       {/* Logo Image */}
-      <Image
-        source={require('./assests/logo.png')}
-        style={styles.logo}
-      />
+      <img src="/assets/logo.png" alt="Meeting NOW Logo" className="logo" />
+
       {/* App Name */}
-      <Text style={styles.appName}>Meeting NOW</Text>
+      <h1 className="app-name">Meeting NOW</h1>
 
       {/* Sign In Button */}
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Sign In</Text>
-      </TouchableOpacity>
+      <button className="sign-in-button">
+        <span className="sign-in-button-text">Sign In</span></button>
 
       {/* Registration Button */}
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Register</Text>
-      </TouchableOpacity>
+      <p className="registration-message">Register</p>
 
       {/* Company Name and Copyright */}
-      <Text style={styles.companyInfo}>Your Company Name © 2024</Text>
-    </View>
+      <p className="company-info">Sunshine Hughes © 2024</p>
+    </div>
   );
 };
 

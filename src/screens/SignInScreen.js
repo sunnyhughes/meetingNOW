@@ -1,58 +1,38 @@
+// src/screens/SignInScreen.js
+
 import React from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
-import { signInStyles } from './SignInScreenStyles';
+import './SignInScreen.css'; // Import the CSS file for styles
 
 const SignInScreen = () => {
   return (
-    <View style={signInStyles.container}>
+    <div className="container">
       {/* Welcome Message */}
-      <Text style={styles.welcomeMessage}>Welcome to Meeting NOW!</Text>
+      <h1 className="welcome-message">Welcome to Meeting NOW!</h1>
 
       {/* Logo */}
-      <Image
-        source={require('./assests/logo_smaller.png')}
-        style={styles.logoSmall}
-      />
+      <img src="/assets/logo_smaller.png" alt="Logo" className="logo-small" />
 
       {/* Username Input */}
-      <TextInput
-        style={styles.input}
-        placeholder="Username"
-      />
+      <input type="text" className="input" placeholder="Username" />
 
       {/* Password Input */}
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry={true}
-      />
+      <input type="password" className="input" placeholder="Password" />
 
-      {/* Remember Me Toggle */}
-      {/* You can use a library for toggle switch or create your own */}
       {/* Submit Button */}
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Submit</Text>
-      </TouchableOpacity>
+      <button className="button">
+        <span className="button-text">Submit</span>
+      </button>
 
       {/* Other Organization Logos */}
-      <View style={styles.otherLogosContainer}>
-        <Image
-          source={require('./assests/logo1.png')}
-          style={styles.otherLogo}
-        />
-        <Image
-          source={require('./assests/logo2.png')}
-          style={styles.otherLogo}
-        />
-        <Image
-          source={require('./assests/logo3.png')}
-          style={styles.otherLogo}
-        />
-      </View>
+      <div className="other-logos-container">
+        <img src="/assets/logo1.png" alt="Other Logo 1" className="other-logo" />
+        <img src="/assets/logo2.png" alt="Other Logo 2" className="other-logo" />
+        <img src="/assets/logo3.png" alt="Other Logo 3" className="other-logo" />
+      </div>
 
       {/* Company Name and Copyright */}
-      <Text style={styles.companyInfo}>Your Company Name © 2024</Text>
-    </View>
+      <p className="company-info">Your Company Name © 2024</p>
+    </div>
   );
 };
 
