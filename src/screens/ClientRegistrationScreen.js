@@ -1,8 +1,5 @@
-// ClientRegistrationScreen.js
-
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-import { styles } from './ClientRegistrationScreenStyles'; // Import styles
+import './ClientRegistrationScreen.css'; // Import CSS file for styling
 
 const ClientRegistrationScreen = () => {
   // State variables for form fields
@@ -31,143 +28,163 @@ const ClientRegistrationScreen = () => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.heading}>Client Registration</Text>
+    <div className="registration-container">
+      <h1 className="heading">Client Registration</h1>
 
       {/* Username and Password Section */}
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={username}
-        onChangeText={setUsername}
+        onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="password"
+        className="input-field"
         value={password}
-        onChangeText={setPassword}
+        onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
-        secureTextEntry={true}
       />
 
       {/* Facility Code Section */}
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={facilityCode}
-        onChangeText={setFacilityCode}
+        onChange={(e) => setFacilityCode(e.target.value)}
         placeholder="Facility Code"
       />
 
       {/* Personal Information Section */}
-      <Text style={styles.sectionHeading}>Personal Information</Text>
-      <TextInput
-        style={styles.input}
+      <h2 className="section-heading">Personal Information</h2>
+      <input
+        type="text"
+        className="input-field"
         value={fullName}
-        onChangeText={setFullName}
+        onChange={(e) => setFullName(e.target.value)}
         placeholder="Full Name"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={address}
-        onChangeText={setAddress}
+        onChange={(e) => setAddress(e.target.value)}
         placeholder="Address"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={city}
-        onChangeText={setCity}
+        onChange={(e) => setCity(e.target.value)}
         placeholder="City"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={state}
-        onChangeText={setState}
+        onChange={(e) => setState(e.target.value)}
         placeholder="State"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={zipCode}
-        onChangeText={setZipCode}
+        onChange={(e) => setZipCode(e.target.value)}
         placeholder="Zip Code"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={phoneNumber}
-        onChangeText={setPhoneNumber}
+        onChange={(e) => setPhoneNumber(e.target.value)}
         placeholder="Phone Number"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={birthdate}
-        onChangeText={setBirthdate}
+        onChange={(e) => setBirthdate(e.target.value)}
         placeholder="Birth Date"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="email"
+        className="input-field"
         value={email}
-        onChangeText={setEmail}
+        onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={homeCity}
-        onChangeText={setHomeCity}
+        onChange={(e) => setHomeCity(e.target.value)}
         placeholder="Home City"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={homeState}
-        onChangeText={setHomeState}
+        onChange={(e) => setHomeState(e.target.value)}
         placeholder="Home State"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={cleanDate}
-        onChangeText={setCleanDate}
+        onChange={(e) => setCleanDate(e.target.value)}
         placeholder="Clean Date"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={emergencyContactName}
-        onChangeText={setEmergencyContactName}
+        onChange={(e) => setEmergencyContactName(e.target.value)}
         placeholder="Emergency Contact Name"
       />
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={emergencyContactNumber}
-        onChangeText={setEmergencyContactNumber}
+        onChange={(e) => setEmergencyContactNumber(e.target.value)}
         placeholder="Emergency Contact Number"
       />
 
       {/* Terms and Conditions Section */}
-      <View style={styles.termsContainer}>
-        <TouchableOpacity onPress={() => setTermsAccepted(!termsAccepted)}>
-          {/* Add checkbox for terms acceptance */}
-          <Text style={{ marginRight: 10 }}>I agree to the terms and conditions</Text>
-          <Text>{termsAccepted ? '✓' : ''}</Text>
-        </TouchableOpacity>
-        {/* Add text for terms and conditions */}
-      </View>
+      <div className="terms-container">
+        <label>
+          <input
+            type="checkbox"
+            checked={termsAccepted}
+            onChange={() => setTermsAccepted(!termsAccepted)}
+          />
+          I agree to the terms and conditions
+        </label>
+      </div>
 
       {/* Captcha Section */}
-      <TextInput
-        style={styles.input}
+      <input
+        type="text"
+        className="input-field"
         value={captcha}
-        onChangeText={setCaptcha}
+        onChange={(e) => setCaptcha(e.target.value)}
         placeholder="Enter Captcha"
       />
 
       {/* Submit Button Section */}
-      <TouchableOpacity
-        style={[styles.submitButton, { backgroundColor: termsAccepted ? 'blue' : 'gray' }]}
-        onPress={handleSubmit}
+      <button
+        className={`submit-button ${termsAccepted ? 'enabled' : 'disabled'}`}
+        onClick={handleSubmit}
         disabled={!termsAccepted}
       >
-        <Text style={styles.submitButtonText}>Register Now</Text>
-      </TouchableOpacity>
+        Register Now
+      </button>
 
       {/* Footer */}
-      <Text style={styles.footerText}>Your Company Name © {new Date().getFullYear()}</Text>
-    </ScrollView>
+      <footer className="footer">
+        <p>Your Company Name © {new Date().getFullYear()}</p>
+      </footer>
+    </div>
   );
 };
 

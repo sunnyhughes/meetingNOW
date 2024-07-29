@@ -1,11 +1,7 @@
-// OrganizationRegistrationScreen.js
-
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-import { styles } from './OrganizationRegistrationScreenStyles'; // Import styles
+import './OrganizationRegistrationScreen.css'; // Import styles
 
 const OrganizationRegistrationScreen = () => {
-  // State variables for form fields
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -17,99 +13,114 @@ const OrganizationRegistrationScreen = () => {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [captcha, setCaptcha] = useState('');
 
-  // Function to handle form submission
   const handleSubmit = () => {
     // Handle form submission logic here
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.heading}>Organization Registration</Text>
+    <div className="container">
+      <h1 className="heading">Organization Registration</h1>
 
-      {/* Username and Password Section */}
-      <TextInput
-        style={styles.input}
-        value={username}
-        onChangeText={setUsername}
-        placeholder="Username"
-      />
-      <TextInput
-        style={styles.input}
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Password"
-        secureTextEntry={true}
-      />
+      <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
+        {/* Username and Password Section */}
+        <input
+          className="input"
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Username"
+        />
+        <input
+          className="input"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+        />
 
-      {/* Organization Information Section */}
-      <Text style={styles.sectionHeading}>Organization Information</Text>
-      <TextInput
-        style={styles.input}
-        value={companyName}
-        onChangeText={setCompanyName}
-        placeholder="Company Name"
-      />
-      <TextInput
-        style={styles.input}
-        value={businessAddress}
-        onChangeText={setBusinessAddress}
-        placeholder="Business Address"
-      />
-      <TextInput
-        style={styles.input}
-        value={representativeName}
-        onChangeText={setRepresentativeName}
-        placeholder="Representative Name"
-      />
-      <TextInput
-        style={styles.input}
-        value={phoneNumber}
-        onChangeText={setPhoneNumber}
-        placeholder="Phone Number"
-      />
-      <TextInput
-        style={styles.input}
-        value={email}
-        onChangeText={setEmail}
-        placeholder="Email Address"
-      />
+        {/* Organization Information Section */}
+        <h2 className="section-heading">Organization Information</h2>
+        <input
+          className="input"
+          type="text"
+          value={companyName}
+          onChange={(e) => setCompanyName(e.target.value)}
+          placeholder="Company Name"
+        />
+        <input
+          className="input"
+          type="text"
+          value={businessAddress}
+          onChange={(e) => setBusinessAddress(e.target.value)}
+          placeholder="Business Address"
+        />
+        <input
+          className="input"
+          type="text"
+          value={representativeName}
+          onChange={(e) => setRepresentativeName(e.target.value)}
+          placeholder="Representative Name"
+        />
+        <input
+          className="input"
+          type="text"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          placeholder="Phone Number"
+        />
+        <input
+          className="input"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email Address"
+        />
 
-      {/* Logo Upload Section */}
-      <Text style={styles.sectionHeading}>Logo Upload</Text>
-      {/* Add input field for logo upload */}
+        {/* Logo Upload Section */}
+        <h2 className="section-heading">Logo Upload</h2>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => setLogo(e.target.files[0])}
+        />
 
-      {/* Terms and Conditions Section */}
-      <Text style={styles.sectionHeading}>Terms and Conditions</Text>
-      <View style={styles.termsContainer}>
-        <TouchableOpacity onPress={() => setTermsAccepted(!termsAccepted)}>
-          {/* Add checkbox for terms acceptance */}
-          <Text style={{ marginRight: 10 }}>I agree to the terms and conditions</Text>
-          <Text>{termsAccepted ? '✓' : ''}</Text>
-        </TouchableOpacity>
-        {/* Add text for terms and conditions */}
-      </View>
+        {/* Terms and Conditions Section */}
+        <h2 className="section-heading">Terms and Conditions</h2>
+        <div className="terms-container">
+          <label>
+            <input
+              type="checkbox"
+              checked={termsAccepted}
+              onChange={() => setTermsAccepted(!termsAccepted)}
+            />
+            I agree to the terms and conditions
+          </label>
+        </div>
 
-      {/* Captcha Section */}
-      <Text style={styles.sectionHeading}>Captcha</Text>
-      <TextInput
-        style={styles.input}
-        value={captcha}
-        onChangeText={setCaptcha}
-        placeholder="Enter Captcha"
-      />
+        {/* Captcha Section */}
+        <h2 className="section-heading">Captcha</h2>
+        <input
+          className="input"
+          type="text"
+          value={captcha}
+          onChange={(e) => setCaptcha(e.target.value)}
+          placeholder="Enter Captcha"
+        />
 
-      {/* Submit Button Section */}
-      <TouchableOpacity
-        style={[styles.submitButton, { backgroundColor: termsAccepted ? 'blue' : 'gray' }]}
-        onPress={handleSubmit}
-        disabled={!termsAccepted}
-      >
-        <Text style={styles.submitButtonText}>Submit</Text>
-      </TouchableOpacity>
+        {/* Submit Button Section */}
+        <button
+          className="submit-button"
+          type="submit"
+          style={{ backgroundColor: termsAccepted ? 'blue' : 'gray' }}
+          disabled={!termsAccepted}
+        >
+          Submit
+        </button>
+      </form>
 
       {/* Footer */}
-      <Text style={styles.footerText}>Your Company Name © {new Date().getFullYear()}</Text>
-    </ScrollView>
+      <footer className="footer-text">Your Company Name © {new Date().getFullYear()}</footer>
+    </div>
   );
 };
 
