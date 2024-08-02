@@ -1,4 +1,3 @@
-// Navigation.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +5,7 @@ function Navigation() {
   return (
     <nav>
       <div className="logo">
-        <Link to="/">Your App Name</Link> {/* Link to the home page */}
+        <Link to="/">Meeting Now</Link> {/* Link to the home page */}
       </div>
       <ul className="nav-links">
         <li><Link to="/profile">Profile</Link></li> {/* Link to the profile page */}
