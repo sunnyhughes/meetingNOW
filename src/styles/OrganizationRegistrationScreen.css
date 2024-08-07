@@ -1,0 +1,64 @@
+.organization-registration-screen {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.organization-logo-upload,
+.organization-basic-information,
+.terms-and-conditions {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.terms-and-conditions {
+  display: flex;
+  align-items: center;
+}
+
+.terms-and-conditions label {
+  margin-left: 10px;
+}
+
+.terms-and-conditions a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.terms-and-conditions a:hover {
+  text-decoration: underline;
+}
