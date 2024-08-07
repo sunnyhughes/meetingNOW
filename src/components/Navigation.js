@@ -8,8 +8,10 @@ function Navigation() {
         <Link to="/">Meeting Now</Link> {/* Link to the home page */}
       </div>
       <ul className="nav-links">
-        <li><Link to="/profile">Profile</Link></li> {/* Link to the profile page */}
-        <li><Link to="/basic-info">Enter Basic Information</Link></li> {/* Link to basic info page */}
+        <li><Link to="/profile-and-basic-info">Profile & Basic Info</Link></li>
+        <li><Link to="/client-dashboard">Client Dashboard</Link></li> {/* Link to client dashboard */}
+        <li><Link to="/client-attendance">Client Attendance</Link></li> {/* Link to client attendance */}
+        <li><Link to="/</li>
         {/* Add more navigation links as needed */}
       </ul>
     </nav>
