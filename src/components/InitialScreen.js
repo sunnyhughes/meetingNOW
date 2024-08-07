@@ -1,9 +1,9 @@
 // src/screens/InitialScreen.js
 import React from 'react';
 import Logo from './Logo';
-import SignInButton from '../components/SignInButton';
-import RegisterButton from '../components/RegisterButton';
-import Footer from '../components/Footer';
+import SignInButton from './SignInButton';
+import RegisterButton from './RegisterButton';
+import Footer from './Footer';
 
 const InitialScreen = () => {
   return (
