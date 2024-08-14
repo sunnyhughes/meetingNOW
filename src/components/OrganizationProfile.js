@@ -2,7 +2,7 @@ import React from 'react';
 import OrganizationBasicInformation from './OrganizationBasicInformation';
 import OrganizationAddressInformation from './OrganizationAddressInformation';
 import OrganizationContactInformation from './OrganizationContactInformation';
-import './OrganizationProfile.css';
+import 'src/styles/OrganizationProfile.css';
 
 const OrganizationProfile = () => {
   return (
