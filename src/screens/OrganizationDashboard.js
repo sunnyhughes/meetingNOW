@@ -1,8 +1,8 @@
 import React from 'react';
-import OrganizationSummary from './OrganizationSummary';
-import OrganizationMeetings from './OrganizationMeetings';
-import OrganizationClients from './OrganizationClients';
-import OrganizationSettings from './OrganizationSettings';
+import OrganizationSummary from '../components/OrganizationSummary';
+import OrganizationMeetings from '../components/OrganizationMeetings';
+import OrganizationClients from '../components/OrganizationClients';
+import OrganizationSettings from '../components/OrganizationSettings';
 import './OrganizationDashboard.css';
 
 const OrganizationDashboard = () => {

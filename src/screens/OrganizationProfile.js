@@ -1,7 +1,7 @@
 import React from 'react';
-import OrganizationBasicInformation from './OrganizationBasicInformation';
-import OrganizationAddressInformation from './OrganizationAddressInformation';
-import OrganizationContactInformation from './OrganizationContactInformation';
+import OrganizationBasicInformation from '../components/OrganizationBasicInformation';
+import OrganizationAddressInformation from '../components/OrganizationAddressInformation';
+import OrganizationContactInformation from '../components/OrganizationContactInformation';
 import 'src/styles/OrganizationProfile.css';
 
 const OrganizationProfile = () => {

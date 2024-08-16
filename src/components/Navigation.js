@@ -11,7 +11,6 @@ function Navigation() {
         <li><Link to="/profile-and-basic-info">Profile & Basic Info</Link></li>
         <li><Link to="/client-dashboard">Client Dashboard</Link></li> {/* Link to client dashboard */}
         <li><Link to="/client-attendance">Client Attendance</Link></li> {/* Link to client attendance */}
-        <li><Link to="/</li>
         {/* Add more navigation links as needed */}
       </ul>
     </nav>

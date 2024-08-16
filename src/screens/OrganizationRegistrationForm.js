@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import OrganizationBasicInformation from './OrganizationBasicInformation';
-import OrganizationAddressInformation from './OrganizationAddressInformation';
-import OrganizationContactInformation from './OrganizationContactInformation';
-import TermsAndConditions from './TermsAndConditions';
+import OrganizationBasicInformation from '../components/OrganizationBasicInformation';
+import OrganizationAddressInformation from '../components/OrganizationAddressInformation';
+import OrganizationContactInformation from '../components/OrganizationContactInformation';
+import TermsAndConditions from '../components/TermsAndConditions';
 import './OrganizationRegistrationForm.css';
 
 const OrganizationRegistrationForm = () => {

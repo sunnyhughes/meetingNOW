@@ -14,7 +14,8 @@ function Sidebar () {
                 <ul>
                     <li><a href="#profile">Profile</a></li>
                     <li><a href="#meetings">Meetings</a></li>
-                    <li><a href="#settings"></a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#settings">Settings</a></li>
                 </ul>
             </nav>
         </aside>

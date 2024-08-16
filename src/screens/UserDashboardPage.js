@@ -1,6 +1,6 @@
 import React from 'react';
-import UserProfileSummary from './UserProfileSummary';
-import UpcomingMeetings from './UpcomingMeetings';
+import UserProfileSummary from '../components/UserProfileSummary';
+import UpcomingMeetings from '../components/UpcomingMeetings';
 import './UserDashboardPage.css';
 
 const UserDashboardPage = () => {

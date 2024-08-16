@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import BasicInformation from './BasicInformation';
-import ContactInformation from './ContactInformation';
-import EmergencyContactInformation from './EmergencyContactInformation';
-import HomeInformation from './HomeInformation';
-import CleanDate from './CleanDate';
-import OtherDetails from './OtherDetails';
-import TermsAndConditions from './TermsAndConditions';
+import RegistrationBasicInformation from '../components/RegistrationBasicInformation';
+import ContactInformation from '../components/ContactInformation';
+import EmergencyContactInformation from '../components/EmergencyContactInformation';
+import HomeInformation from '../components/HomeInformation';
+import CleanDate from '../components/CleanDate';
+import OtherDetails from '../components/OtherDetails';
+import TermsAndConditions from '../components/TermsAndConditions';
 import './RegistrationForm.css';
 
 const RegistrationForm = () => {
@@ -44,7 +44,7 @@ const RegistrationForm = () => {
   return (
     <form onSubmit={handleSubmit} className="registration-form">
       <h2>User Registration</h2>
-      <BasicInformation user={user} onChange={handleChange} />
+      <RegistrationBasicInformation user={user} onChange={handleChange} />
       <ContactInformation user={user} onChange={handleChange} />
       <EmergencyContactInformation user={user} onChange={handleChange} />
       <HomeInformation user={user} onChange={handleChange} />
