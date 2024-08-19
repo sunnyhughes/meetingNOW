@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AttendanceTable from './AttendanceTable';
-import AttendanceFilters from './AttendanceFilters';
+import AttendanceTable from '../components/AttendanceTable';
+import AttendanceFilters from '../components/AttendanceFilters';
 import './MeetingAttendancePage.css';
 
 const MeetingAttendancePage = () => {
